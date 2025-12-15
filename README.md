@@ -30,15 +30,10 @@ SpotifyBrowser/
 ## :hammer: CONFIGURATION
 ### :headphones: SPOTIFY APP SETUP
 1. Create a Spotify Developer account at [https://developer.spotify.com/](https://developer.spotify.com/) or log in if an account already exists.
-
 2. On the [Dashboard](https://developer.spotify.com/dashboard), click the `Create app` button.
-
 3. Enter in any app name and description.
-
 4. In the *Redirect URIs* field, enter in *http://127.0.0.1:8888/callback* and click `Add`.
-
 5. Under the *Which API/SDKs are you planning to use?* field, select the `Web API` option.
-
 6. Check the *Developer Terms of Service* checkbox and click `Save`. A *Client ID* and *Client Secret* should be generated under the *Basic Information* tab.
 
 ### :computer: ENVIRONMENT SETUP
