@@ -9,7 +9,7 @@ Based on assignment instructions from Prof. Daniel Epstein
 
 ## :film_strip: DEMO
 
-## :gear: HOW IT WORKS
+## :classical_building: ARCHITECTURE
 
 
 ## :open_file_folder: PROJECT FILE STRUCTURE
@@ -88,6 +88,6 @@ Run the Angular client (in a separate terminal, from `client/`)
 ng serve --open
 ```
 
-> The app will automatically open in the browser at [http://localhost:4200/](http://localhost:4200/).
+The app will automatically open in the browser at [http://localhost:4200/](http://localhost:4200/).
 
 ## :wrench: TRY IT OUT
