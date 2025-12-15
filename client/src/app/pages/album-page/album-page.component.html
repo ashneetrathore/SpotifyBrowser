@@ -1,0 +1,28 @@
+@if(album) {
+<div class="row">
+    <div class="col-12 col-sm-6">
+        <!--Populates with album name-->
+        <h1> {{ album.name }}</h1>
+        <!--Sets src to album image URL-->
+        <img [src]="album.imageURL" id="albumImg">
+        <!--Adds thermometer with album's popularity -->
+        <app-thermometer [popularity]="album.popularity"></app-thermometer>
+        <!--Uses @for to loop over album artists-->
+        @for(artist of album.artists; track artist){
+        <p>
+            <!--Links to artist page, displays artist name-->
+            Artist: <a [routerLink]="[ '/artist', artist.id]"> {{ artist.name }} </a>
+        </p>
+        }
+        <p>
+            <!--Links to album page on spotify, displays album name-->
+            <a class=" btn btn-light " role="button " target="_blank " [href]="album.url">Open {{ album.name }} on Spotify</a>
+        </p>
+    </div>
+    <div class="col-12 col-sm-6 ">
+        <h3>Album Tracks</h3>
+        <!--Displays the track list for the album. Hides the artist and album columns b/c they are redundant on this page-->
+        <app-track-list [tracks]="tracks " [hideArtist]=true [hideAlbum]=true></app-track-list>
+    </div>
+</div>
+}

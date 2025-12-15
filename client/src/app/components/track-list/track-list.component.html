@@ -1,0 +1,46 @@
+@if(tracks) {
+<table class="table table-sm table-light table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Track</th>
+            <th scope="col">Duration</th>
+            <!--Uses @if to hide if hideArtist is true-->
+            @if (hideArtist == false) {
+            <th scope="col">Primary Artist</th>
+            }
+            <!--Uses @if to hide if hideAlbum is true-->
+            @if (hideAlbum == false) {
+            <th scope="col">Album</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <!--Uses @for to loop over tracks-->
+        @for(track of tracks; track track) {
+        <tr>
+            <!--Populates with row index (starts with 1!)-->
+            <td>{{ $index + 1}}</td>
+            <td>
+                <!--Link to the endpoint for that track, displays the track's name-->
+                <a [routerLink]="['/track', track.id]">{{ track.name }}</a>
+            </td>
+            <!--Displays the track' s duration-->
+            <td>{{ track.durationStr }}</td>
+            <!--Uses @if to hide if hideArtist is true; links to the first artist's endpoint and displays the first artist's name-->
+            @if (hideArtist == false) {
+            <td>
+                <a [routerLink]="['/artist', track.artists[0].id]">{{ track.artists[0].name }}</a>
+            </td>
+            }
+            <!--Uses @if to hide if hideAlbum is true; links to the album's endpoint and displays the album's name-->
+            @if (hideAlbum == false) {
+            <td>
+                <a [routerLink]="['/album', track.album.id]">{{ track.album.name }}</a>
+            </td>
+            }
+        </tr>
+        }
+    </tbody>
+</table>
+}

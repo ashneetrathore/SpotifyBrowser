@@ -1,0 +1,12 @@
+<!--Defines click callback to load about me information-->
+<button class="btn btn-light" (click)="populateInfo()">Load info about me</button>
+<!--Replaces ??? to bind to name-->
+@if(name != null) {
+<h3>Logged in user: {{ name }}</h3>
+<!--Binds img src's to profile_pic-->
+<img [src]="profile_pic" class="profile">
+<p>
+    <!--Binds link's href to profile_link-->
+    <a [href]="profile_link" class="btn btn-light" target=" _blank ">Open profile on Spotify</a>
+</p>
+}
