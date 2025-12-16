@@ -29,7 +29,7 @@ Links within components are context-aware - clicking a track on an Artist page n
 > The overview of the file structure is intentionally kept minimal. Additional directories/files exist in the project.
 ```bash
 SpotifyBrowser/
-│── client/         # Contains Angular frontend for browsing music
+│── client/         # Contains Angular-related files (components, services, data class definitions, etc)
 │── webserver/      # Contains Express/Node.js backend for communicating with Spotify API
 │── angular.json    # Configures Angular project
 │── package.json    # Contains project dependencies
@@ -103,6 +103,9 @@ The app will automatically open in the browser at [http://localhost:4200/](http:
 2. Login with the Spotify account you used to create the Spotify Developer app.
 3. Authorize the app to access your Spotify account.
 4. Click `Load info about me` to display your profile information, including username, profile picture, and a link to your Spotify profile.
+
+> [!NOTE]
+> Steps 2 and 3 are only required the first time you log in. On subsequent visits, clicking `Log in` will automatically use your stored credentials.
 
 ### :mag: PERFORM SEARCHES
 **1. Artist Search**\
