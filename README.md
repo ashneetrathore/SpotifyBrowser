@@ -5,7 +5,7 @@ Date: February 2025\
 Developer(s): Ashneet Rathore\
 Based on assignment instructions from Prof. Daniel Epstein
 
-
+Spotify Browser is a full-stack web application that allows users to search and browse Spotify content by artist, track, and album categories. Users can seamlessly navigate between related results, such as exploring an artist's albums or viewing the tracks within an album. The app leverages the Spotify Web API to retrieve real-time music data, presented through an intuitive, component-driven browsing interface.
 
 ## :film_strip: DEMO
 
