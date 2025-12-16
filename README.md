@@ -15,12 +15,12 @@ Implemented in **Node.js** with an **Express webserver**, the backend handles co
 
 The backend also manages **OAuth 2.0 authentication** by redirecting users to Spotify to authorize access to the app, and storing the received access and refresh tokens. These tokens allow the backend to make authorized API requests on behalf of the user without exposing sensitive credentials to the frontend.
 
-The frontend is built with **Angular**, **TypeScript**, **HTML**, and **CSS**, providing a dynamic, component-based interface. Users can submit search queries through input fields and dropdowns, which Angular captures and sends as HTTP requests to the backend. Once the backend returns the structured data, Angular renders it using [components](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/components) like carousels for albums and artists or tables for track lists. Additionally, the [*about*](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/components/about) component displays user-specific information, like the Spotify profile picture and username. Some components use **Bootstrap** for styling and layout. Navigation between artist, album, and track [pages](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/pages) is handled via Angular routing, creating a smooth user experience. The following is a description of each page in the application and what it features:
+The frontend is built with **Angular**, **TypeScript**, **HTML**, and **CSS**, providing a dynamic, component-based interface. Users can submit keyword-based search queries through input fields and dropdowns, which Angular captures and sends as HTTP requests to the backend. Once the backend returns the structured data, Angular renders it using [components](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/components) like carousels for albums and artists or tables for track lists. Additionally, the [*about*](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/components/about) component displays user-specific information, like the Spotify profile picture and username. Some components use **Bootstrap** for styling and layout. Navigation between artist, album, and track [pages](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/pages) is handled via Angular routing, creating a smooth user experience. The following is a description of each page in the application and what it features:
 
-- Home page | Displays information about the logged-in user's account and contains the main search component, which supports searching by artist, album, or track
-- Artist page | Shows details about an artist, including a carousel of their albums and a table of their top tracks
-- Album page | Shows information about a specific album, including the associated artist and track list
-- Track page | Displays details for a specific track, including the associated artist and album
+- Home page | Displays information about the logged-in user's account and contains the main search component, which supports keyword-based searching by artist, album, or track
+- Artist page | Shows artist details, including profile picture, popularity stats, a carousel of their albums and a table of their top tracks
+- Album page | Shows album details, including album cover, popularity, associated artist, and track list
+- Track page | Displays track details, including duration, popularity, and associated artist and album
 
 Links within components are context-aware - clicking a track on an Artist page navigates to the corresponding Track page, clicking an artist on an Album page navigates to the corresponding Artist page, etc.
 
@@ -98,3 +98,23 @@ ng serve --open
 The app will automatically open in the browser at [http://localhost:4200/](http://localhost:4200/).
 
 ## :wrench: TRY IT OUT
+### :key: LOGIN AS SPOTIFY USER
+1. After opening the application in your browser, click `Log in` in the top of the navigation bar.
+2. Login with the Spotify account you used to create the Spotify Developer app.
+3. Authorize the app to access your Spotify account.
+4. Click `Load info about me` to display your profile information, including username, profile picture, and a link to your Spotify profile.
+
+### :mag: PERFORM SEARCHES
+**1. Artist Search**\
+  Type a keyword (e.g. artist name, album title, track title), select the *artist* option from the dropdown, and click `Search`.\
+  Results are displayed in a carousel of artists. Use the ⟩ button to browse all the results, and click a result to navigate to the Artist page.
+
+**2. Album Search**\
+  Type a keyword (e.g. album title, artist name, track title), select the *album* option from the dropdown, and click `Search`.\
+  Results are displayed in a carousel of albums. Use the ⟩ button to browse all the results, and click a result to navigate to the Album page.
+
+**3. Track Search**\
+  Type a keyword (e.g. track title, artist name, album title), select the *track* option from the dropdown, and click `Search`.\
+  Results are displayed in a track list table, where each track links to its associated Track page, Artist page, and Album page.
+
+Navigating the Artist, Album, and Track pages is intuitive. Each page contain context-aware links that allow seamless navigation between artists, albums, and tracks.
