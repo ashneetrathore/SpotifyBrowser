@@ -8,7 +8,9 @@ Based on assignment instructions from Prof. Daniel Epstein
 Spotify Browser is a full-stack web application that allows users to search and browse Spotify content by artist, track, and album categories. The app leverages the Spotify Web API to retrieve real-time music data, presented through an intuitive, component-driven browsing interface. Users can seamlessly navigate between related results, such as exploring an artist's albums or viewing the tracks within an album. 
 
 **Tech Stack** | Node.js, Express, Spotify Web API, Angular, TypeScript, HTML, CSS, Bootstrap
+
 ## :film_strip: DEMO
+[Watch the demo on Youtube](https://youtu.be/JD12388sbag)
 
 ## :classical_building: ARCHITECTURE
 Implemented in **Node.js** with an **Express webserver**, the backend handles communication with the **Spotify Web API** and manages all data retrieval. When the frontend submits a search query, it sends a request to the relevant [Express endpoints](https://github.com/ashneetrathore/SpotifyBrowser/blob/main/client/src/app/services/spotify.service.ts) on the backend, which in turn interact with the API to fetch the results. The results are then processed into structured [TypeScript objects](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/data) and sent to the frontend for display.
@@ -35,8 +37,7 @@ SpotifyBrowser/
 │── package.json    # Contains project dependencies
 │── tsconfig.json   # Configures TypeScript compiler options
 │── README.md       # Project documentation
-│── .gitignore      # Excludes files and folders from version control
-└── demo.gif        # GIF showing the browsing demo
+└── .gitignore      # Excludes files and folders from version control
 ```
 
 ## :hammer: CONFIGURATION
@@ -120,4 +121,4 @@ The app will automatically open in the browser at [http://localhost:4200/](http:
   Type a keyword (e.g. track title, artist name, album title), select the *track* option from the dropdown, and click `Search`.\
   Results are displayed in a track list table, where each track links to its associated Track page, Artist page, and Album page.
 
-> Navigating the Artist, Album, and Track pages is intuitive. Each page contains context-aware links that allow seamless navigation between artists, albums, and tracks. To navigate back home, click `Home` in the top navigation bar.
+> Each page contains context-aware links that allow intuitive, seamless navigation between artists, albums, and tracks. To navigate back home, click `Home` in the top navigation bar.
