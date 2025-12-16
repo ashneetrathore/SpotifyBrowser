@@ -99,7 +99,7 @@ The app will automatically open in the browser at [http://localhost:4200/](http:
 
 ## :wrench: TRY IT OUT
 ### :key: LOGIN AS SPOTIFY USER
-1. After opening the application in your browser, click `Log in` in the top of the navigation bar.
+1. After opening the application in your browser, click `Log in` in the top navigation bar.
 2. Login with the Spotify account you used to create the Spotify Developer app.
 3. Authorize the app to access your Spotify account.
 4. Click `Load info about me` to display your profile information, including username, profile picture, and a link to your Spotify profile.
@@ -117,4 +117,4 @@ The app will automatically open in the browser at [http://localhost:4200/](http:
   Type a keyword (e.g. track title, artist name, album title), select the *track* option from the dropdown, and click `Search`.\
   Results are displayed in a track list table, where each track links to its associated Track page, Artist page, and Album page.
 
-> Navigating the Artist, Album, and Track pages is intuitive. Each page contain context-aware links that allow seamless navigation between artists, albums, and tracks.
+> Navigating the Artist, Album, and Track pages is intuitive. Each page contains context-aware links that allow seamless navigation between artists, albums, and tracks. To navigate back home, click `Home` in the top navigation bar.
