@@ -26,7 +26,7 @@ Links within components are context-aware - clicking a track on an Artist page n
 
 ## :open_file_folder: PROJECT FILE STRUCTURE
 > [!NOTE]
-> The file structure overview is intentionally kept minimal. Additional directories/files exist in the project.
+> The overview of the file structure is intentionally kept minimal. Additional directories/files exist in the project.
 ```bash
 SpotifyBrowser/
 │── client/         # Contains Angular frontend for browsing music
@@ -117,4 +117,4 @@ The app will automatically open in the browser at [http://localhost:4200/](http:
   Type a keyword (e.g. track title, artist name, album title), select the *track* option from the dropdown, and click `Search`.\
   Results are displayed in a track list table, where each track links to its associated Track page, Artist page, and Album page.
 
-Navigating the Artist, Album, and Track pages is intuitive. Each page contain context-aware links that allow seamless navigation between artists, albums, and tracks.
+> Navigating the Artist, Album, and Track pages is intuitive. Each page contain context-aware links that allow seamless navigation between artists, albums, and tracks.
