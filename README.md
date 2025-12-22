@@ -10,7 +10,7 @@ Spotify Browser is a full-stack web application for searching and browsing Spoti
 **Tech Stack** | Node.js, Express, Spotify Web API, Angular, TypeScript, HTML, CSS, Bootstrap
 
 ## :film_strip: DEMO
-[Watch the demo on Youtube](https://youtu.be/JD12388sbag)
+[Watch the demo on Youtube](https://youtu.be/Iu-WppmJ8cI)
 
 ## :classical_building: ARCHITECTURE
 Implemented in **Node.js** with an **Express webserver**, the backend handles communication with the **Spotify Web API** and manages all data retrieval. When the frontend submits a search query, it sends a request to the relevant [Express endpoints](https://github.com/ashneetrathore/SpotifyBrowser/blob/main/client/src/app/services/spotify.service.ts) on the backend, which in turn interact with the API to fetch the results. The results are then processed into structured [TypeScript objects](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/data) and sent to the frontend for display.
