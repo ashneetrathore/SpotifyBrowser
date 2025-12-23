@@ -31,11 +31,8 @@ Links within components are context-aware - clicking a track on an Artist page n
 > The overview of the file structure is intentionally kept minimal. Additional directories/files exist in the project.
 ```bash
 SpotifyBrowser/
-│── client/         # Contains Angular-related files (components, services, data class definitions, etc)
+│── client/         # Contains Angular-related files (components, services, configs, etc)
 │── webserver/      # Contains Express/Node.js backend for communicating with Spotify API
-│── angular.json    # Configures Angular project
-│── package.json    # Contains project dependencies
-│── tsconfig.json   # Configures TypeScript compiler options
 │── README.md       # Project documentation
 └── .gitignore      # Excludes files and folders from version control
 ```
