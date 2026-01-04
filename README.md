@@ -9,6 +9,8 @@ Spotify Browser is a full-stack web application for searching and browsing Spoti
 
 **Tech Stack** | Node.js, Express, Spotify Web API, Angular, TypeScript, HTML, CSS, Bootstrap
 
+View more of my full-stack web apps on GitHub [here](https://github.com/stars/ashneetrathore/lists/full-stack)
+
 ## :film_strip: DEMO
 [Watch the demo on Youtube](https://youtu.be/Iu-WppmJ8cI)
 
