@@ -80,7 +80,7 @@ cd SpotifyBrowser/webserver
 npm install
 ```
 
-**5. Install dependencies in `client/`**
+**4. Install dependencies in `client/`**
 ```bash
 cd SpotifyBrowser/client
 npm install
