@@ -19,7 +19,7 @@ Implemented in **Node.js** with an **Express webserver**, the backend handles co
 
 The backend also manages **OAuth 2.0 authentication** by redirecting users to Spotify for authorization, and storing the received access and refresh tokens. These tokens allow the backend to make authorized API requests on behalf of the user without exposing sensitive credentials to the frontend.
 
-The frontend is built with **Angular (TypeScript)**, **HTML**, and **CSS**, providing a dynamic, component-based interface. Users can submit keyword-based search queries through input fields and dropdowns, which Angular captures and sends as HTTP requests to the backend. Once the backend returns the structured data, Angular renders it using [components](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/components) like carousels for albums and artists or tables for track lists. Additionally, the [*about*](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/components/about) component displays user-specific information, like the Spotify profile picture and username. Some components use **Bootstrap** for styling and layout. Navigation between artist, album, and track [pages](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/pages) is handled via Angular routing, creating a smooth user experience.
+The frontend is built with **Angular (TypeScript)**, **HTML**, and **CSS**, providing a dynamic, component-based interface. Users can submit keyword-based search queries through input fields and dropdowns, which Angular captures and sends as HTTP requests to the backend. Once the backend returns the structured data, Angular renders it using [components](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/components) like carousels for albums and artists or tables for track lists. Additionally, the *about* component displays user-specific information, like the Spotify profile picture and username. Some components use **Bootstrap** for styling and layout. Navigation between artist, album, and track [pages](https://github.com/ashneetrathore/SpotifyBrowser/tree/main/client/src/app/pages) is handled via Angular routing, creating a smooth user experience.
 
 ## :page_facing_up: PAGES AND FEATURES
 Description of the pages in the application:
@@ -35,10 +35,19 @@ Links within components are context-aware - clicking a track on an Artist page n
 > The overview of the file structure is intentionally kept minimal. Additional directories/files exist in the project.
 ```bash
 SpotifyBrowser/
-│── client/         # Contains Angular-related files (components, services, configs, etc)
-│── webserver/      # Contains Express/Node.js backend for communicating with Spotify API
-│── README.md       # Project documentation
-└── .gitignore      # Excludes files and folders from version control
+│── client/                             # Contains Angular-related files
+│   └── src/
+│       └── app/
+│           │── components/             # Contains reusable UI widgets (caraousels, tables)
+│           │── data/                   # Defines Typescript classes for transforming API responses into structured objects
+│           │── pages/                  # Implements route-level page components, each with its layout and logic
+│           │── services/               # Sends HTTP requests to Express endpoints
+│           └── app-routing.module.ts   # Maps URL routes to Angular pages
+│── webserver/                          # Contains Express/Node.js backend
+│   └── routes/
+│       └── index.js                    # Defines backend API routes and handles Spotify API communication
+│── README.md                           # Project documentation
+└── .gitignore                          # Excludes files and folders from version control
 ```
 
 ## :hammer: CONFIGURATION
