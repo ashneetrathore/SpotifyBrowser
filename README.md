@@ -23,7 +23,7 @@ The frontend is built with **Angular (TypeScript)**, **HTML**, and **CSS**, prov
 
 ## :page_facing_up: PAGES AND FEATURES
 Description of the pages in the application:
-- Home Page | Displays information about the logged-in user's account and contains the main search component, which supports keyword-based searching by artist, album, or track
+- Home Page | Displays information about the logged-in user's account and contains the main search feature, which supports keyword-based searching by artist, album, or track
 - Artist Page | Shows artist details, including profile picture, popularity stats, a carousel of their albums and a table of their top tracks
 - Album Page | Shows album details, including album cover, popularity, associated artist, and track list
 - Track Page | Displays track details, including duration, popularity, and associated artist and album
