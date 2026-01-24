@@ -7,7 +7,7 @@ Based on assignment instructions from Prof. Daniel Epstein
 
 Spotify Browser is a full-stack web application for searching and browsing Spotify content by artist, track, and album categories. The app leverages the Spotify Web API to retrieve real-time music data, presented through an intuitive, component-driven browsing interface. Users can seamlessly navigate between related results, such as exploring an artist's albums or viewing the tracks within an album. 
 
-**Tech Stack** | Node.js, Express, Spotify Web API, Angular, TypeScript, HTML, CSS, Bootstrap
+**Tech Stack** | Node.js (JavaScript), Express, Spotify Web API, Angular, TypeScript, HTML, CSS, Bootstrap
 
 View more of my full-stack apps on GitHub [here](https://github.com/stars/ashneetrathore/lists/full-stack)
 
@@ -15,11 +15,11 @@ View more of my full-stack apps on GitHub [here](https://github.com/stars/ashnee
 [Watch the demo on Youtube](https://youtu.be/Iu-WppmJ8cI)
 
 ## :classical_building: ARCHITECTURE
-Implemented in **Node.js** with an **Express webserver**, the backend handles communication with the **Spotify Web API** and manages all data retrieval. When the frontend submits a search query, it sends a request to the relevant Express endpoints on the backend, which in turn interact with the API to fetch the results. The results are then processed into structured TypeScript objects and sent to the frontend for display.
+Implemented in **Node.js** with an **Express webserver**, the backend handles communication with the **Spotify Web API** and manages all data retrieval. When the frontend submits a search query, it sends a request to the relevant Express endpoints on the backend, which in turn sends API requests to fetch the results. The backend then forwards these raw JSON results to the frontend for processing and display.
+
+The frontend is built with **Angular (TypeScript)**, **HTML**, and **CSS**, using a component-based structure where both pages and reusable UI widgets are treated as components. Users can submit keyword-based search queries, which Angular captures and sends as HTTP requests to the backend. Angular processes the returned data from the backend into structured Typescript objects, which are then rendered by the page components using UI widgets (carousels for albums and artists or tables for track lists). Additionally, the *about* component displays user-specific information, like the Spotify profile picture and username. Some components use **Bootstrap** for styling and layout. Navigation between artist, album, and track pages is handled via Angular routing, creating a smooth user experience.
 
 The backend also manages **OAuth 2.0 authentication** by redirecting users to Spotify for authorization, and storing the received access and refresh tokens. These tokens allow the backend to make authorized API requests on behalf of the user without exposing sensitive credentials to the frontend.
-
-The frontend is built with **Angular (TypeScript)**, **HTML**, and **CSS**, providing a dynamic, component-based interface. Users can submit keyword-based search queries through input fields and dropdowns, which Angular captures and sends as HTTP requests to the backend. Once the backend returns the structured data, Angular renders it using components like carousels for albums and artists or tables for track lists. Additionally, the *about* component displays user-specific information, like the Spotify profile picture and username. Some components use **Bootstrap** for styling and layout. Navigation between artist, album, and track pages is handled via Angular routing, creating a smooth user experience.
 
 ## :page_facing_up: PAGES AND FEATURES
 Description of the pages in the application:
@@ -40,7 +40,7 @@ SpotifyBrowser/
 │       └── app/
 │           │── components/             # Contains reusable UI widgets (caraousels, tables)
 │           │── data/                   # Defines Typescript classes for transforming API responses into structured objects
-│           │── pages/                  # Implements route-level page components, each with its layout and logic
+│           │── pages/                  # Implements page components, each with its layout and logic
 │           │── services/               # Sends HTTP requests to Express endpoints
 │           └── app-routing.module.ts   # Maps URL routes to Angular pages
 │── webserver/                          # Contains Express/Node.js backend
